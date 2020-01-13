@@ -38,42 +38,35 @@
     </div>
 </nav>
 
-<div style="height: 120px; margin-top: 20px; border-bottom: solid gray 2px; ">
-        <h3 style="font-size: 6vh;">WELCOME</h3><br><br>
-    <div class="h3">
-        <h3 class="type" style="font-size: 6vh;"></h3>
-        
-    </div>
-    
+
+
+
+<div class="container" style="margin-top: 100px;">
+    <label>Leave your contact</label>
+    <input class="form-control" id="contactinfo" placeholder="mail, phone, etc."><br>
+
+    <label>Description of the job</label>
+    <input  class="form-control" id="textinfo" rows="1" name="txt" placeholder="Text here"></textarea><br>
+    <input  type="button" onclick="change()" value="submit" class="btn btn-primary"> 
+    <br><br><br>
+    <p name ="por"class="poruka"> </p>
+    <p name ="por"class="kontakt"> </p>
+    <br><br>
 </div>
 
 
 
-    <section >
-        <div class="container"><div class="row">
-            <div class="col-sm-6 txt" >
-                <p>This site is created in order to help students to find part time job and earn some money</p>
-            </div>
-        
-           <div class="col-sm-6 forma">
-            <form method="POST" action="check.php">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Keep me logged int</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Log in</button>
-            </form></div>
-        </div></div>
-    </section>
+<script>
+
+function change(){
+    var con = document.getElementById("contactinfo").value;
+    var por = document.getElementById("textinfo").value;
+    document.querySelector('.poruka').textContent = 'JOB: ' + por;
+    document.querySelector('.kontakt').textContent = 'Contact: ' + con;
+}
+ 
+
+  </script>
 
     
 
